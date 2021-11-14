@@ -7,7 +7,7 @@ namespace PhoneBook
 {
     class PhoneBook
     {
-        private List<Contact> _contacts { get; set; }   
+        private List<Contact> _contacts { get; set; } = new List<Contact>();
         private void DisplayContactDetail(Contact contact)
         {
             Console.WriteLine($"Contact: {contact.Name},{contact.Number}");
@@ -19,7 +19,7 @@ namespace PhoneBook
                 DisplayContactDetail(contact);
             }
         }
-        public void Add(Contact contact)
+        public void AddContact(Contact contact)
         {
             _contacts.Add(contact);
         }
